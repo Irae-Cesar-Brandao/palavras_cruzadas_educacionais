@@ -8,3 +8,24 @@ FREEPIK. Fundo de Quebra cabeças colorido. Dispnível em: <https://br.freepik.c
 <br>
 Alterados os código HTML e CSS de forma a dar melhor designer na aplicação. 
 <br>
+Respotas da palavra cruzada:
+<hr>
+
+educar  = Ensinar habilidades ou conhecimentos.
+<br>
+editar  = Modificar um texto ou conteúdo.
+<br>
+contribuir = Dar algo em benefício de um propósito.
+<br>
+partilhar = Compartilhar informações ou recursos.
+<br>
+aprender = Adquirir conhecimento ou habilidades.
+<br>
+usar  = Utilizar algo para um propósito específico.
+<br>
+pensar  = Ter processos mentais para resolver problemas. 
+<br>
+raciocinar  = Desenvolver argumentos ou soluções lógicas.
+<br>
+armazenar = Guardar informações para uso futuro.
+<hr>
