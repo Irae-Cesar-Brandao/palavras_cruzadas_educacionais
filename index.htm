@@ -98,7 +98,10 @@ button{
 }
 
 div.StdDiv, div.ExerciseContainer, div.ReadingContainer{
-	background-color: var(--strExBGColor);
+	background-image: url(background_jogo.jpg); 
+                     background-repeat: repeat;
+           	background-size: 100%;
+                    /*background-color: var(--strExBGColor);*/
 	text-align: center;
 	font-size: 1em;
 	color: var(--strTextColor);
@@ -124,6 +127,7 @@ div#ContainerDiv{
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
+
 }
 
 /* Finalizar CSS da página principal */
@@ -230,6 +234,7 @@ div.Feedback {
 	position: absolute;
 	display: none;
 	font-size: 1em;
+	background-color: green;
 }
 
 
@@ -237,6 +242,7 @@ div.Feedback {
 
 div.ExerciseDiv{
 	color: var(--strTextColor);
+
 }
 
 /* JMatch standard output table. */
@@ -1548,7 +1554,7 @@ function DownTime(){
 </div>
 
 <div id="InstructionsDiv" class="StdDiv">
-	<div id="Instructions">Complete as palavras cruzadas e clique em &#x201C;Verificar&#x201D; para verificar sua resposta. Se voc&#x00EA; tiver d&#x00FA;vidas, pode clicar em "Dica" para obter uma carta gr&#x00E1;tis. Clique em um n&#x00FA;mero na grade para ver a pista ou pistas desse n&#x00FA;mero</div>
+	<div id="Instructions">Complete as palavras cruzadas e clique em "Enter" para que ela seja inserida; para verificar sua resposta. Se você tiver dúvidas, pode clicar em "Hint" (Dica)  para obter uma carta (letra) grátis. Clique em um número na grade para ver a pista ou pistas desse número</div>
 </div>
 
 <div id="ContainerDiv">
@@ -1566,7 +1572,7 @@ function DownTime(){
 
 <!-- Este botão superior está oculto; descomente-o para revelá-lo. -->
 <!--
-<button id="CheckButton1" class="FuncButton" onclick="CheckAnswers()">&#160;Check&#160;</button>
+<button id="CheckButton1" class="FuncButton" onclick="CheckAnswers()"VERIFICAR"</button>
 
  -->
  
@@ -1589,7 +1595,16 @@ function DownTime(){
 <tbody id="CluesAcross">
 <tr><td colspan="2"><h3 class="ExerciseSubtitle" id="CluesAcrossLabel">Pistas Horizontais:</h3></td></tr>
 
-<tr><td class="ClueNum">1. </td><td id="Clue_A_1" class="Clue">Ato ou a&#x00E7;&#x00E3;o de desenvolver argumentos ou solu&#x00E7;&#x00F5;es l&#x00F3;gicas.</td></tr><tr><td class="ClueNum">3. </td><td id="Clue_A_3" class="Clue">Ter processos mentais para resolver problemas.</td></tr><tr><td class="ClueNum">5. </td><td id="Clue_A_5" class="Clue">Compartilhar informa&#x00E7;&#x00F5;es ou recursos.</td></tr><tr><td class="ClueNum">6. </td><td id="Clue_A_6" class="Clue">A&#x00E7;&#x00E3;o de ensinar habilidades ou conhecimentos (ato praticado por professores/educadores).</td></tr><tr><td class="ClueNum">7. </td><td id="Clue_A_7" class="Clue">A&#x00E7;&#x00E3;o de guardar informa&#x00E7;&#x00F5;es para uso futuro.</td></tr><tr><td class="ClueNum">8. </td><td id="Clue_A_8" class="Clue">A&#x00E7;&#x00E3;o de modificar um texto ou conte&#x00FA;do.</td></tr>
+<tr><td class="ClueNum">1. </td>
+	<td id="Clue_A_1" class="Clue">Ato ou ação de desenvolver argumentos ou soluções lógicas.</td></tr>
+<tr><td class="ClueNum">3. </td>
+	<td id="Clue_A_3" class="Clue">Ter processos mentais para resolver problemas.</td></tr>
+<tr><td class="ClueNum">5. </td>
+	<td id="Clue_A_5" class="Clue">Compartilhar informações ou recursos.</td></tr>
+<tr><td class="ClueNum">6. </td>
+	<td id="Clue_A_6" class="Clue">Ação de ensinar habilidades ou conhecimentos (ato praticado por professores/educadores).</td></tr>
+	<tr><td class="ClueNum">7. </td><td id="Clue_A_7" class="Clue">Ação de guardar informações para uso futuro.</td></tr>
+<tr><td class="ClueNum">8. </td><td id="Clue_A_8" class="Clue">Ação de modificar um texto ou conteúdo.</td></tr>
 
 </tbody>
 </table>
@@ -1602,7 +1617,12 @@ function DownTime(){
 <tbody id="CluesDown">
 <tr><td colspan="2"><h3 class="ExerciseSubtitle" id="CluesDownLabel">Pistas Verticais.</h3></td></tr>
 
-<tr><td class="ClueNum">2. </td><td id="Clue_D_2" class="Clue">Dar algo em benef&#x00ED;cio de um prop&#x00F3;sito.</td></tr><tr><td class="ClueNum">4. </td><td id="Clue_D_4" class="Clue">Utilizar algo para um prop&#x00F3;sito espec&#x00ED;fico.</td></tr><tr><td class="ClueNum">7. </td><td id="Clue_D_7" class="Clue">Adquirir conhecimento ou habilidades.</td></tr>
+<tr><td class="ClueNum">2. </td>
+	<td id="Clue_D_2" class="Clue">Dar algo em benefício de um propósito.</td></tr>
+<tr><td class="ClueNum">4. </td>
+	<td id="Clue_D_4" class="Clue">Utilizar algo para um propósito específico.</td></tr>
+<tr><td class="ClueNum">7. </td>
+	<td id="Clue_D_7" class="Clue">Adquirir conhecimento ou habilidades.</td></tr>
 
 </tbody>
 </table>
@@ -1652,13 +1672,15 @@ Clique aqui para saber as respostas - <a href="Gabarito_cruzadas.pdf" style="col
 <footer>
           <!--&copy; Iraê César Brandão -  2023 -  Programador Web - Uso Educacional da Internet.--> 
 
-	<h7  style="color: lightblue; text-align: center;"> &copy;  Iraê C. Brandão  2023 -  Todos os direitos reservados - Desenvolvedor Web / Gestor de TI / Empresário / Professor de Tecnologia/Oficina Multidisciplinar - <a href="https://www.linkedin.com/in/irae-cesar-brandao-a2112b69/" 
+	<h7  style="color: lightblue; text-align: center;"> &copy;  Iraê C. Brandão  2023 -  Todos os direitos reservados - Desenvolvedor Web / Gestor de TI / Empresário / Professor de Tecnologia/Oficina Multidisciplinar -<br>
+Linkledin: <a href="https://www.linkedin.com/in/irae-cesar-brandao-a2112b69/" 
 		       style="color: greenyellow;" target="_blank"> 
 	https://www.linkedin.com/in/irae-cesar-brandao-a2112b69/ 
 	</a></h7> 
 	<br>
 <br>
-<a href="https://br.freepik.com/vetores-gratis/fundo-de-quebra-cabeca-colorido_31282006.htm#query=quebra%20cabecas%20educativos&position=10&from_view=keyword&track=ais&uuid=d1672e64-9712-4688-bc5a-2baa87315652">Imagem de brgfx</a> no Freepik
+<a href="https://br.freepik.com/vetores-gratis/fundo-de-quebra-cabeca-colorido_31282006.htm#query=quebra%20cabecas%20educativos&position=10&from_view=keyword&track=ais&uuid=d1672e64-9712-4688-bc5a-2baa87315652">Imagem de brgfx (Crédito de Imagens)</a> no Freepik
 </footer>
 
 </html>
+
